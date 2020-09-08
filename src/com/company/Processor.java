@@ -22,7 +22,10 @@ public class Processor {
         }
         try {
             MathOperator mathOperator = new MathOperator();
-            result=String.valueOf(mathOperator.calculate(strings[1],number1,number2));
+            String res =mathOperator.calculate(strings[1],number1,number2);
+            ArabicToRom arabicToRom = new ArabicToRom();
+            result=arabicToRom.getRomNumber(Integer.parseInt(res));
+
         }catch (Exception e){
 
         }
